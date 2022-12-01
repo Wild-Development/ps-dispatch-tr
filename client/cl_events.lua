@@ -1,48 +1,69 @@
 local WeaponTable = {
-    [584646201]   = "CLASS 2: AP-Pistol",
-    [453432689]   = "CLASS 1: Pistol",
-    [3219281620]  = "CLASS 1: Pistol MK2",
-    [1593441988]  = "CLASS 1: Combat Pistol",
-    [-1716589765] = "CLASS 1: Heavy Pistol",
-    [-1076751822] = "CLASS 1: SNS-Pistol",
-    [-771403250]  = "CLASS 2: Desert Eagle",
-    [137902532]   = "CLASS 2: Vintage Pistol",
-    [-598887786]  = "CLASS 2: Marksman Pistol",
-    [-1045183535] = "CLASS 2: Revolver",
+    -- Custom weapons
+    [GetHashKey("weapon_ak47")] = "Sınıf 3: AK-47",
+    [GetHashKey("weapon_de")] = "Sınıf 2: Desert Eagle",
+    [GetHashKey("weapon_fnx45")] = "Sınıf 1: FN .45",
+    [GetHashKey("weapon_glock17")] = "Sınıf 1: Glock 17",
+    [GetHashKey("weapon_m4")] = "Sınıf 3: M4",
+    [GetHashKey("weapon_hk416")] = "Sınıf 3: HK-416",
+    [GetHashKey("weapon_mk14")] = "Sınıf 4: MK 14",
+    [GetHashKey("weapon_mk14")] = "Sınıf 4: M110",
+    [GetHashKey("weapon_huntingrifle")] = "Sınıf 3: Av Silahı",
+    [GetHashKey("weapon_ar15")] = "Sınıf 3: AR-15",
+    [GetHashKey("weapon_m9")] = "Sınıf 1: M9",
+    [GetHashKey("weapon_m70")] = "Sınıf 3: m70",
+    [GetHashKey("weapon_m1911")] = "Sınıf 1: 1911",
+    [GetHashKey("weapon_mac10")] = "Sınıf 2: Mac-10",
+    [GetHashKey("weapon_uzi")] = "Sınıf 2: Uzi",
+    [GetHashKey("weapon_mp9")] = "Sınıf 2: MP9",
+    [GetHashKey("weapon_mossberg")] = "Sınıf 2: Mossberg",
+    [GetHashKey("weapon_remington")] = "Sınıf 2: Remington",
+    [GetHashKey("weapon_scarh")] = "Sınıf 3: Scar-H",
+    [584646201]   = "Sınıf 2: AP-Pistol",
+    [453432689]   = "Sınıf 1: Tabanca",
+    [3219281620]  = "Sınıf 1: Pistol MK2",
+    [1593441988]  = "Sınıf 1: Combat Pistol",
+    [-1716589765] = "Sınıf 1: Heavy Pistol",
+    [-1076751822] = "Sınıf 1: SNS-Pistol",
+    [-771403250]  = "Sınıf 2: Desert Eagle",
+    [137902532]   = "Sınıf 2: Vintage Pistol",
+    [-598887786]  = "Sınıf 2: Marksman Pistol",
+    [-1045183535] = "Sınıf 2: Revolver",
     [911657153]   = "Taser",
-    [324215364]   = "CLASS 2: Micro-SMG",
-    [-619010992]  = "CLASS 2: Machine-Pistol",
-    [736523883]   = "CLASS 2: SMG",
-    [2024373456]  = "CLASS 2: SMG MK2",
-    [-270015777]  = "CLASS 2: Assault SMG",
-    [171789620]   = "CLASS 2: Combat PDW",
-    [-1660422300] = "CLASS 4: Combat MG",
-    [3686625920]  = "CLASS 4: Combat MG MK2",
-    [1627465347]  = "CLASS 4: Gusenberg",
-    [-1121678507] = "CLASS 2: Mini SMG",
-    [-1074790547] = "CLASS 3: Assaultrifle",
-    [961495388]   = "CLASS 3: Assaultrifle MK2",
-    [-2084633992] = "CLASS 3: Carbinerifle",
-    [4208062921]  = "CLASS 3: Carbinerifle MK2",
-    [-1357824103] = "CLASS 3: Advancedrifle",
-    [-1063057011] = "CLASS 3: Specialcarbine",
-    [2132975508]  = "CLASS 3: Bulluprifle",
-    [1649403952]  = "CLASS 3: Compactrifle",
-    [100416529]   = "CLASS 4: Sniperrifle",
-    [205991906]   = "CLASS 4: Heavy Sniper",
-    [177293209]   = "CLASS 4: Heavy Sniper MK2",
-    [-952879014]  = "CLASS 4: Marksmanrifle",
-    [487013001]   = "CLASS 2: Pumpshotgun",
-    [2017895192]  = "CLASS 2: Sawnoff Shotgun",
-    [-1654528753] = "CLASS 3: Bullupshotgun",
-    [-494615257]  = "CLASS 3: Assaultshotgun",
-    [-1466123874] = "CLASS 3: Musket",
-    [984333226]   = "CLASS 3: Heavyshotgun",
-    [-275439685]  = "CLASS 2: Doublebarrel Shotgun",
-    [317205821]   = "CLASS 2: Autoshotgun",
-    [-1568386805] = "CLASS 5: GRENADE LAUNCHER",
-    [-1312131151] = "CLASS 5: RPG",
-    [125959754]   = "CLASS 5: Compactlauncher"
+    [324215364]   = "Sınıf 2: Micro-SMG",
+    [-619010992]  = "Sınıf 2: Machine-Pistol",
+    [736523883]   = "Sınıf 2: SMG",
+    [2024373456]  = "Sınıf 2: SMG MK2",
+    [-270015777]  = "Sınıf 2: Assault SMG",
+    [171789620]   = "Sınıf 2: Combat PDW",
+    [-1660422300] = "Sınıf 4: Combat MG",
+    [3686625920]  = "Sınıf 4: Combat MG MK2",
+    [1627465347]  = "Sınıf 4: Gusenberg",
+    [-1121678507] = "Sınıf 2: Mini SMG",
+    [-1074790547] = "Sınıf 3: Assaultrifle",
+    [961495388]   = "Sınıf 3: Assaultrifle MK2",
+    [-2084633992] = "Sınıf 3: Carbinerifle",
+    [4208062921]  = "Sınıf 3: Carbinerifle MK2",
+    [-1357824103] = "Sınıf 3: Advancedrifle",
+    [-1063057011] = "Sınıf 3: Specialcarbine",
+    [2132975508]  = "Sınıf 3: Bulluprifle",
+    [1649403952]  = "Sınıf 3: Compactrifle",
+    [100416529]   = "Sınıf 4: Sniperrifle",
+    [205991906]   = "Sınıf 4: Heavy Sniper",
+    [177293209]   = "Sınıf 4: Heavy Sniper MK2",
+    [-952879014]  = "Sınıf 4: Marksmanrifle",
+    [487013001]   = "Sınıf 2: Pumpshotgun",
+    [2017895192]  = "Sınıf 2: Sawnoff Shotgun",
+    [-1654528753] = "Sınıf 3: Bullupshotgun",
+    [-494615257]  = "Sınıf 3: Assaultshotgun",
+    [-1466123874] = "Sınıf 3: Musket",
+    [984333226]   = "Sınıf 3: Heavyshotgun",
+    [-275439685]  = "Sınıf 2: Doublebarrel Shotgun",
+    [317205821]   = "Sınıf 2: Autoshotgun",
+    [-1568386805] = "Sınıf 5: GRENADE LAUNCHER",
+    [-1312131151] = "Sınıf 5: RPG",
+    [125959754]   = "Sınıf 5: Compactlauncher",
+    [-1768145561] = "Scar-L"
 }
 local function VehicleTheft(vehicle)
     local vehdata = vehicleData(vehicle)
@@ -87,7 +108,7 @@ local function VehicleShooting(vehdata)
     if GetEntityBoneIndexByName(vehicle, 'door_pside_r') ~= -1 then doorCount = doorCount + 1 end
     if GetEntityBoneIndexByName(vehicle, 'door_dside_f') ~= -1 then doorCount = doorCount + 1 end
     if GetEntityBoneIndexByName(vehicle, 'door_dside_r') ~= -1 then doorCount = doorCount + 1 end
-    if doorCount == 2 then doorCount = "Two-Door" elseif doorCount == 3 then doorCount = "Three-Door" elseif doorCount == 4 then doorCount = "Four-Door" else doorCount = "UNKNOWN" end
+    if doorCount == 2 then doorCount = "İki Kapılı" elseif doorCount == 3 then doorCount = "Üç Kapılı" elseif doorCount == 4 then doorCount = "Dört Kapılı" else doorCount = "BİLİNMİYOR" end
     TriggerServerEvent("dispatch:server:notify", {
         dispatchcodename = "vehicleshots", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
         dispatchCode = "10-60",
@@ -112,6 +133,14 @@ local function VehicleShooting(vehdata)
 end
 
 exports('VehicleShooting', VehicleShooting)
+
+RegisterCommand("silahne", function()
+    local PlayerPed = PlayerPedId()
+    local CurrentWeapon = GetSelectedPedWeapon(PlayerPed)
+    local weapon = WeaponTable[CurrentWeapon] or "UNKNOWN"
+print(weapon)
+print(CurrentWeapon)
+end)
 
 
 local function Shooting()

@@ -222,3 +222,38 @@ local function SignRobbery()
         job = {"police"} -- jobs that will get the alerts
     })
 end exports('SignRobbery', SignRobbery)
+
+---------------------------
+----- YARDIM İSTEĞİ -------
+---------------------------
+
+local function yardimpol()
+    local PlayerData = QBCore.Functions.GetPlayerData(source)
+    local isim = PlayerData.charinfo.firstname
+    local soyisim = PlayerData.charinfo.lastname
+    local currentPos = GetEntityCoords(PlayerPedId())
+    local locationInfo = getStreetandZone(currentPos)
+    local gender = GetPedGender()
+    TriggerServerEvent("dispatch:server:notify",{
+        dispatchcodename = "memuryaralandi", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        dispatchCode = "10-12",
+        firstStreet = locationInfo,
+        gender = gender,
+        model = nil,
+        plate = nil,
+        priority = 2, -- priority
+        firstColor = nil,
+        automaticGunfire = false,
+        origin = {
+            x = currentPos.x,
+            y = currentPos.y,
+            z = currentPos.z
+        },
+        dispatchMessage = "Memur "..soyisim.." Acil Yardım İstiyor!", -- message
+        job = {"police"} -- jobs that will get the alerts
+    })
+end exports('yardimpol', yardimpol)
+
+RegisterCommand("yardimbutonu", function()
+    yardimpol()
+end)

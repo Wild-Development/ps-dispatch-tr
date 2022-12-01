@@ -132,7 +132,7 @@ function vehicleData(vehicle)
 	local vehicleColour1, vehicleColour2 = GetVehicleColours(vehicle)
 	if vehicleColour1 then
 		if Config.Colours[tostring(vehicleColour2)] and Config.Colours[tostring(vehicleColour1)] then
-			vehicleColour = Config.Colours[tostring(vehicleColour2)] .. " on " .. Config.Colours[tostring(vehicleColour1)]
+			vehicleColour = Config.Colours[tostring(vehicleColour2)] .. " üstüne " .. Config.Colours[tostring(vehicleColour1)]
 		elseif Config.Colours[tostring(vehicleColour1)] then
 			vehicleColour = Config.Colours[tostring(vehicleColour1)]
 		elseif Config.Colours[tostring(vehicleColour2)] then
@@ -153,17 +153,17 @@ function vehicleData(vehicle)
 end
 
 function GetPedGender()
-    local gender = "Male"
-    if QBCore.Functions.GetPlayerData().charinfo.gender == 1 then gender = "Female" end
+    local gender = "Erkek"
+    if QBCore.Functions.GetPlayerData().charinfo.gender == 1 then gender = "Kadın" end
     return gender
 end
 
 function getCardinalDirectionFromHeading()
     local heading = GetEntityHeading(PlayerPedId())
-    if heading >= 315 or heading < 45 then return "North Bound"
-    elseif heading >= 45 and heading < 135 then return "West Bound"
-    elseif heading >=135 and heading < 225 then return "South Bound"
-    elseif heading >= 225 and heading < 315 then return "East Bound" end
+    if heading >= 315 or heading < 45 then return "Kuzey Yönünde"
+    elseif heading >= 45 and heading < 135 then return "Batı Yönünde"
+    elseif heading >=135 and heading < 225 then return "Güney Yönünde"
+    elseif heading >= 225 and heading < 315 then return "Doğu Yönünde" end
 end
 
 function IsPoliceJob(job)

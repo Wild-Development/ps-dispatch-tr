@@ -1,6 +1,5 @@
-
 $(document).ready(() => {
-    window.addEventListener('message', function (event) {
+    window.addEventListener('message', function(event) {
         let data = event.data;
         if (data.update == "newCall") {
             addNewCall(data.callID, data.timer, data.data, data.isPolice);
@@ -51,17 +50,17 @@ function timeAgo(dateParam) {
     const isThisYear = today.getFullYear() === date.getFullYear();
 
     if (seconds < 5) {
-        return 'Just Now';
+        return 'Az Önce';
     } else if (seconds < 60) {
-        return `${seconds} Seconds ago`;
+        return `${seconds}  Saniye Önce`;
     } else if (seconds < 90) {
-        return 'About a minute ago';
+        return 'Yaklaşık 1 Dakika Önce';
     } else if (minutes < 60) {
-        return `${minutes} Minutes ago`;
+        return `${minutes} Dakika Önce`;
     } else if (isToday) {
-        return getFormattedDate(date, 'Today');
+        return getFormattedDate(date, 'Bugün');
     } else if (isYesterday) {
-        return getFormattedDate(date, 'Yesterday');
+        return getFormattedDate(date, 'Dün');
     } else if (isThisYear) {
         return getFormattedDate(date, false, true);
     }
@@ -73,10 +72,9 @@ function addNewCall(callID, timer, info, isPolice) {
     console.log(callID, timer, info, isPolice)
     const prio = info['priority']
     let DispatchItem;
-    if (info['isDead']){
+    if (info['isDead']) {
         DispatchItem = `<div class="dispatch-item ${callID} dispatch-item-${info['isDead']} animate__animated"><div class="top-info-holder"><div class="call-id">#${callID}</div><div class="call-code priority-${prio}">${info.dispatchCode}</div><div class="call-name">${info.dispatchMessage}</div></div><div class="bottom-info-holder">`
-    }
-    else{
+    } else {
         DispatchItem = `<div class="dispatch-item ${callID} dispatch-item-${isPolice} animate__animated"><div class="top-info-holder"><div class="call-id">#${callID}</div><div class="call-code priority-${prio}">${info.dispatchCode}</div><div class="call-name">${info.dispatchMessage}</div></div><div class="bottom-info-holder">`
     }
 
@@ -87,7 +85,7 @@ function addNewCall(callID, timer, info, isPolice) {
         DispatchItem += `<div class="call-bottom-info"><span class="fas fa-clock"></span>${timeAgo(info['time'])}</div>`
     }
 
-    
+
 
     if (info['firstStreet']) {
         DispatchItem += `<div class="call-bottom-info"><span class="fas fa-map-pin"></span>${info['firstStreet']}</div>`
@@ -108,13 +106,13 @@ function addNewCall(callID, timer, info, isPolice) {
     if (info['weapon']) {
         DispatchItem += `<div class="call-bottom-info"><span class="fas fa-bullseye"></span>${info['weapon']}</div>`
     }
-    
+
     if (info["camId"]) {
         DispatchItem += `<div class="call-bottom-info"><span class="fas fa-camera"></span>${info['camId']}</div>`
     }
 
     if (info['gender']) {
-        DispatchItem += `<div class="call-bottom-info"><span class="fas fa-genderless"></span>${info['gender']}</div>`
+        DispatchItem += `<div class="call-bottom-info"><span class="fas fa-venus-mars"></span>${info['gender']}</div>`
     }
 
     if (info['model'] && info['plate']) {
@@ -141,7 +139,7 @@ function addNewCall(callID, timer, info, isPolice) {
     }
 
     if (info['information']) {
-        DispatchItem += `<div class="line"></div><div class="call-bottom-info call-bottom-information"><span class="far fa-question-circle"></span>${info['information']}</div>`
+        DispatchItem += `<div class="line"></div><div class="call-bottom-info call-bottom-information"><span class="fas fa-envelope-open-text"></span>${info['information']}</div>`
     }
 
     DispatchItem += `</div></div>`
@@ -161,6 +159,6 @@ function addNewCall(callID, timer, info, isPolice) {
         $(`.${callID}`).addClass("animate__backOutRight");
         setTimeout(() => {
             $(`.${callID}`).remove();
-            }, 1000);
-        }, timer || 4500);
+        }, 1000);
+    }, timer || 4500);
 };

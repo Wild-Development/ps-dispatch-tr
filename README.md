@@ -1,5 +1,5 @@
 # ps-dispatch Türkçe
-https://github.com/wilddevelopment/ps-dispatch
+[Wild Development Discord Sunucumuz](https://discord.gg/wilddevelopment)
 # ps-dispatch
 ## Wild Development Sunar
 Shot Fire
